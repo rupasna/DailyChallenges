@@ -1,0 +1,11 @@
+===== Summary Report =====
+Total Unique Users:
+       3
+Requests Per User:
+   5 alice
+   2 bob
+   5 john
+Total Successful Requests (Status Code 200):
+8
+Total Failed Requests (Status Codes 404 and 403):
+3
