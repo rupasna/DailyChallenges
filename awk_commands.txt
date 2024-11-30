@@ -1,0 +1,12 @@
+# Extract Unique IP Addresses
+awk '{ for (i = 1; i <= NF; i++) if ($i ~ /^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$/) print $i }' user_activity.log | sort -u
+
+# Extract Usernames
+awk '{ for (i = 1; i <= NF; i++) if ($i ~ /user=/) print $i }' user_activity.log | awk -F= '{print $2}' | sort -u
+
+# Count HTTP Status Codes
+awk '{ for (i = 1; i <= NF; i++) if ($i ~ /status=[0-9]{3}/) print $i }' user_activity.log | awk -F= '{print $2}' | sort | uniq -c | sort -n
+
+# Identify Failed Login Attempts
+awk '$0 ~ /403/ { print $0 }' user_activity.log
+

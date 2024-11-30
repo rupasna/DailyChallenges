@@ -1,0 +1,13 @@
+2024-11-30 12:00:01 192.168.1.1 user=john action=login status=200
+2024-11-30 12:01:15 10.0.0.2 user=alice action=view status=200
+2024-11-30 12:02:22 192.168.1.1 user=john action=edit status=200
+2024-11-30 12:03:30 172.16.0.3 user=alice action=delete status=403
+2024-11-30 12:05:44 192.168.1.1 user=john action=logout status=200
+2024-11-30 12:06:59 10.0.0.2 user=alice action=login status=200
+2024-11-30 12:08:10 172.16.0.4 user=bob action=view status=404
+2024-11-30 12:10:00 192.168.1.1 user=john action=login status=403
+2024-11-30 12:11:55 172.16.0.4 user=bob action=edit status=200
+2024-11-30 12:12:45 10.0.0.2 user=alice action=logout status=200
+2024-11-30 12:13:33 192.168.1.1 user=john action=login status=200
+2024-11-30 12:14:12 172.16.0.3 user=alice action=edit status=500
+
